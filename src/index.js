@@ -17,7 +17,6 @@ class MinimalChainable {
             // Replace references to previous outputs in the prompt
             for (let j = i; j > 0; j--) {
                 const previousOutput = output[i - j];
-                console.log('typeof previousOutput', typeof previousOutput);
 
                 // Try to parse previousOutput into an object
                 let previousOutputObj = previousOutput;
