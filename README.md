@@ -218,3 +218,7 @@ Finalize the newsletter by providing a summary of the selected posts the summary
 4. AI tools like AIVA, Sensei, and Dreamcatcher are revolutionizing sound, graphics, and 3D design, empowering creators. Go to https://girlazo.com.
 5. Art theft on Instagram threatens artists' integrity and livelihood, emphasizing the need for better intellectual property protections. Go to https://girlazo.com.
 ```
+
+---
+
+_Inspired by daikeren prompt chain gist in python_
