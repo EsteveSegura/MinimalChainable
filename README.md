@@ -150,3 +150,71 @@ When integrating **MinimalChainable** into your projects, remember:
 - Stay close to the prompt to maintain clarity and control.
 - Avoid unnecessary abstractions to maintain simplicity and debugging efficiency.
 - Start with minimal, purposeful code that accomplishes specific tasks effectively.
+
+## Examples
+
+### Summary of Prompts and Results
+
+#### Calling the Reddit API
+The code makes a request to the Reddit API to fetch posts from the `/r/artificial` subreddit. It filters posts that have content in `selftext` and returns a list with titles, texts, and URLs.
+
+#### First Prompt: Post Selection
+The first prompt takes the fetched Reddit posts and asks to select the 5 most interesting ones. The prompt is filled with a list of post titles.
+
+**Prompt:**
+```plaintext
+Please select the 5 most interesting posts of this artificial intelligence subreddit to generate a newsletter
+Reddit Posts:
+- Title 1
+- Title 2
+...
+```
+
+**Result:**
+```plaintext
+1. AI-sludge site creates zombified versions of real technology writers
+2. ChatGPT might rule the AI chatbots — but it can't beat Google Search
+3. Musicians are in trouble
+4. What AI tools are creators you using in the Sound/Gfx/3D area?
+5. My favorite painter got ripped off on Instagram, and I’m grieving the end of an era
+```
+
+#### Second Prompt: Generating Post Bodies
+Using the selected titles from the first prompt, the second prompt asks to generate the body text for each selected post.
+
+**Prompt:**
+```plaintext
+Now, let's generate the body for each selected post to include in the newsletter
+1. Title 1
+2. Title 2
+...
+```
+
+**Result:**
+```plaintext
+1. AI-sludge site creates zombified versions of real technology writers
+   In an unsettling development, a notorious "AI-sludge" website has begun...
+2. ChatGPT might rule the AI chatbots — but it can't beat Google Search
+   While ChatGPT has become a dominant force in the realm of AI chatbots...
+...
+```
+
+#### Third Prompt: Summary and CTA
+Using the generated bodies from the second prompt, the third prompt asks for a summary in one sentence, including a call to action (CTA) to visit `https://girlazo.com`.
+
+**Prompt:**
+```plaintext
+Finalize the newsletter by providing a summary of the selected posts the summary has to be less than the length of a tweet, and it has to be in one sentence, and a call to action: CTA should be go to https://girlazo.com. Content to summarize: 
+1. Body 1
+2. Body 2
+...
+```
+
+**Result:**
+```plaintext
+1. AI-generated articles mimic tech writers but lack human depth, raising ethical concerns about journalism's future. Go to https://girlazo.com.
+2. ChatGPT excels in conversation but can't surpass Google Search's accuracy and breadth in providing relevant information. Go to https://girlazo.com.
+3. Musicians face financial and creative challenges from streaming royalties and AI-generated music, necessitating industry adaptation. Go to https://girlazo.com.
+4. AI tools like AIVA, Sensei, and Dreamcatcher are revolutionizing sound, graphics, and 3D design, empowering creators. Go to https://girlazo.com.
+5. Art theft on Instagram threatens artists' integrity and livelihood, emphasizing the need for better intellectual property protections. Go to https://girlazo.com.
+```
