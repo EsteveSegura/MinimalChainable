@@ -1,7 +1,6 @@
 const fs = require('fs');
 const MinimalChainable = require('../src/index.js');
 
-// Mock del módulo fs
 jest.mock('fs');
 
 describe('MinimalChainable', () => {
