@@ -9,7 +9,7 @@
 To begin, install **MinimalChainable** from GitHub using npm:
 
 ```bash
-npm install <github-repo-url>
+npm install https://github.com/EsteveSegura/MinimalChainable
 ```
 
 ### Basic Usage
